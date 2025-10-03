@@ -2,7 +2,7 @@ import streamlit as st
 from google import genai
 from PyPDF2 import PdfReader
 
-client = genai.Client(api_key="AIzaSyCVR2c_azojOoqdSy4Jrb9CalE1Wqt3-lg")
+client = genai.Client(api_key="")
 
 st.title("PDF Summarizer with Gemini")
 
@@ -110,4 +110,5 @@ if uploaded_file is not None:
     )
 
     st.subheader("Summarized Output")
+
     st.text(response.text.replace('**',''))
